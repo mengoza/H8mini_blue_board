@@ -19,7 +19,7 @@
 
 // rate in deg/sec
 // for acro mode
-#define MAX_RATE 1080.0
+#define MAX_RATE 720.0
 #define MAX_RATEYAW 720.0
 
 // max angle for level mode
