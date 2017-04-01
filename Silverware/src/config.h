@@ -3,10 +3,12 @@
 //Attaccare il dongle all'h8 con la batteria inserita,
 //Collegare il dongle al pc,
 //Aggiornare il firmware del dongle con st-linkupgrade,
+//Chiudere st-linkupgrade,
 //Da uVision fare flash->erase,
 //Staccare il dongle dal pc,
 //Ricollegare il dongle al pc,
 //Riaggiornare il firmware del dongle con st-linkupgrade,
+//Chiudere st-linkupgrade,
 //Da uVision fare flash->download,
 //FATTO!
 
