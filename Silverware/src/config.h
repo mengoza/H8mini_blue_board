@@ -1,3 +1,14 @@
+//NOTE IMPORTANTI:
+//Per flashare l'h8 con la board blue usando il dongle st-link v2:
+//Attaccare il dongle all'h8 con la batteria inserita,
+//Collegare il dongle al pc,
+//Aggiornare il firmware del dongle con st-linkupgrade,
+//Da uVision fare flash->erase,
+//Staccare il dongle dal pc,
+//Ricollegare il dongle al pc,
+//Riaggiornare il firmware del dongle con st-linkupgrade,
+//Da uVision fare flash->download,
+//FATTO!
 
 #include "defines.h"
 #include "hardware.h"
@@ -6,15 +17,16 @@
 
 // rate in deg/sec
 // for acro mode
-#define MAX_RATE 360.0
-#define MAX_RATEYAW 360.0
+#define MAX_RATE 1080.0
+#define MAX_RATEYAW 720.0
 
 // max angle for level mode
-#define MAX_ANGLE_HI 55.0f
+#define MAX_ANGLE_HI 65.0f
 
+//Ho messo exper mode CH_ON quindi non dovrebbe mai usarlo
 #define LOW_RATES_MULTI 0.5f
 
-// disable inbuilt expo functions
+// disable inbuilt exponential functions
 #define DISABLE_EXPO
 
 // use if your tx has no expo function
@@ -33,7 +45,7 @@
 
 // under this voltage the software will not start 
 // if STOP_LOWBATTERY is defined above
-#define STOP_LOWBATTERY_TRESH 3.3
+#define STOP_LOWBATTERY_TRESH 3.2
 
 // voltage to start warning
 // volts
@@ -115,15 +127,19 @@
 // CH_ON - on always ( all protocols)
 // CH_OFF - off always ( all protocols)
 
-#define HEADLESSMODE CH_OFF
-// rates / expert mode
-#define RATES CH_EXPERT
 
-#define LEVELMODE CH_AUX1
+
+
+#define LEVELMODE CH_FLIP
+
+#define LEDS_ON CH_HEADFREE
+
+// rates / expert mode
+#define RATES CH_ON
 
 #define STARTFLIP CH_OFF
 
-#define LEDS_ON CH_ON
+#define HEADLESSMODE CH_OFF
 
 // switch for fpv / other, requires fet
 // comment out to disable
@@ -131,7 +147,7 @@
 
 // Airmode keeps the PID loop stabilizing the quads orientation even at zero throttle.
 // To stop the motors on ground a switch on the remote control is necessary.
-//#define AIRMODE_HOLD_SWITCH CH_INV // DEVO_CHAN_5
+//#define AIRMODE_HOLD_SWITCH CH_HEADFREE // DEVO_CHAN_5
 
 
 // aux1 channel starts on if this is defined, otherwise off.
