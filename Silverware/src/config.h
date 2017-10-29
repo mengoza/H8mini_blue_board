@@ -132,9 +132,9 @@
 
 
 
-#define LEVELMODE CH_FLIP
+#define LEVELMODE MY_CHAN_5
 
-#define LEDS_ON CH_HEADFREE
+#define LEDS_ON MY_CHAN_6
 
 // rates / expert mode
 #define RATES CH_ON
@@ -149,7 +149,7 @@
 
 // Airmode keeps the PID loop stabilizing the quads orientation even at zero throttle.
 // To stop the motors on ground a switch on the remote control is necessary.
-//#define AIRMODE_HOLD_SWITCH CH_HEADFREE // DEVO_CHAN_5
+//#define AIRMODE_HOLD_SWITCH MY_CHAN_6 // DEVO_CHAN_5
 
 
 // aux1 channel starts on if this is defined, otherwise off.

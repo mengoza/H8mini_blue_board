@@ -67,6 +67,12 @@
 #define CH_AUX3 CH_OFF
 #define CH_AUX4 CH_OFF
 
+#define MY_CHAN_5 CH_HEADFREE
+#define MY_CHAN_6 CH_FLIP
+#define MY_CHAN_7 CH_PIC
+#define MY_CHAN_8 CH_VID
+#define MY_CHAN_9 CH_INV
+#define MY_CHAN_10 CH_RTH
 
 #define DEVO_CHAN_5 CH_INV
 #define DEVO_CHAN_6 CH_FLIP
